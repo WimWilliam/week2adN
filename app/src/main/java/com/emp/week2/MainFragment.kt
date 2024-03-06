@@ -9,11 +9,7 @@ import androidx.navigation.Navigation
 import com.emp.week2.databinding.FragmentMainBinding
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MainFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
 
@@ -37,9 +33,8 @@ class MainFragment : Fragment() {
             val playerName=binding.txtName.text.toString()
             val action = MainFragmentDirections.actionGamefragment(playerName)
             Navigation.findNavController(it).navigate(action)
-
         }
-        }
+    }
 
 
 }
