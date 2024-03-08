@@ -32,10 +32,10 @@ class ResultFragment : Fragment() {
 
         }
 
-        binding.btnKembali.setOnClickListener {
-            val action = ResultFragmentDirections.actionMainFragment()
-            Navigation.findNavController(it).navigate(action)
-        }
+//        binding.btnKembali.setOnClickListener {
+//            val action = ResultFragmentDirections.actionMainFragment()
+//            Navigation.findNavController(it).navigate(action)
+//        }
 
     }
 

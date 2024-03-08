@@ -1,5 +1,6 @@
 package com.emp.week2
 
+import android.graphics.Path.Direction
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -45,9 +46,13 @@ class GameFragment : Fragment() {
             if (Integer.parseInt(binding.txtJawab.text.toString()) == answer){
                 score = 1
             }
-            val action = GameFragmentDirections.actionResultFragment(score)
-            Navigation.findNavController(it).navigate(action)
+//            val action = GameFragmentDirections.actionResultFragment(score)
+//            Navigation.findNavController(it).navigate(action)
 
+        }
+
+        binding.btnTest.setOnClickListener{
+            //val action = GameFragmentDirections(Direction.actionOptionFragment)
         }
 
 

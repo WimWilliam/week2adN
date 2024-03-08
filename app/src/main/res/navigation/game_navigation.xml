@@ -3,16 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/game_navigation"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/itemHome">
 
     <fragment
-        android:id="@+id/mainFragment"
+        android:id="@+id/itemHome"
         android:name="com.emp.week2.MainFragment"
         android:label="main screen"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/actionGamefragment"
             app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/actionOptionFragment"
+            app:destination="@id/optionFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -23,7 +26,7 @@
             android:name="player_name"
             app:argType="string" />
         <action
-            android:id="@+id/actionResultFragment"
+            android:id="@+id/action_gameFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
     <fragment
@@ -31,11 +34,23 @@
         android:name="com.emp.week2.ResultFragment"
         android:label="Result Screen"
         tools:layout="@layout/fragment_result">
-        <action
-            android:id="@+id/actionMainFragment"
-            app:destination="@id/mainFragment" />
         <argument
             android:name="answer"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/optionFragment"
+        android:name="com.emp.week2.OptionFragment"
+        android:label="fragment_option"
+        tools:layout="@layout/fragment_option" />
+    <fragment
+        android:id="@+id/itemProfil"
+        android:name="com.emp.week2.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="com.emp.week2.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
